@@ -1,0 +1,89 @@
+#puzadpn{display:none;}
+body,html{width:100%;margin:0;height:100%;font-family: 'Comic Sans MS', cursive;color:#EC7800;}
+.EGG{position: absolute;text-align: center;transition: margin-left 1000ms linear 0ms;}
+.EGG2{height:211px;width:128px;vertical-align:bottom;display:table-cell;}
+#EGGSGAME {
+ height: 100%;
+ width: 100%;
+ display: block;
+}
+.EGGSHOW{
+ transition: all 100ms cubic-bezier(0, 3.25, 0, -3.32) 100ms;
+ transform: scale(1.20);
+ margin-top: -20px;
+}
+.score {
+ color: #FFF;
+ font-size: xx-large;
+ font-weight: bold;
+ float: right;
+ display: flex;
+}
+.score1 {
+ background-color: rgba(0, 0, 0, 0.36);
+ padding: 10px;
+ margin: 20;
+ border-radius: 20px 25px;
+}
+ @keyframes anim {
+ from {
+ transform: none;
+ }
+ to {
+ transform: scale(1.1);
+ }
+ }
+ @-webkit-keyframes anim {
+ from {
+ transform: none;
+ }
+ to {
+ transform: scale(1.1);
+ }
+ }
+#clean {
+animation: anim 600ms infinite alternate;
+-webkit-animation: anim 600ms infinite alternate;position: relative;
+top: 50%;
+left: 50%;
+width: 128px;
+height: 128px;
+margin-left: -104px;
+margin-top: -104px;
+transform: scale(1.1);
+border: 10px #fff;
+border-style: dotted;
+border-radius: 91px;
+padding: 20px;
+}
+
+ @keyframes rotegg {
+ from {
+ transform: rotate(-15deg);
+ }
+ to {
+ transform: rotate(15deg);
+ }
+ }
+ @-webkit-keyframes rotegg {
+ from {
+ transform: rotate(-15deg);
+ }
+ to {
+ transform: rotate(15deg);
+ }
+ }
+
+.roteg{
+animation: linear rotegg 145ms infinite alternate;
+-webkit-animation: linear rotegg 145ms infinite alternate;
+}
+
+
+.zerk{
+-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+}
