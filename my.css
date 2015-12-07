@@ -2,7 +2,7 @@
 body,html{width:100%;margin:0;height:100%;font-family: 'Comic Sans MS', cursive;color:#EC7800;}
 .EGG{position: absolute;text-align: center;transition: margin-left 1000ms linear 0ms;}
 .EGG2{height:211px;width:128px;vertical-align:bottom;display:table-cell;}
-#EGGSGAME {
+.EGGSGAME {
  height: 100%;
  width: 100%;
  display: block;
