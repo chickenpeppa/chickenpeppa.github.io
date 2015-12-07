@@ -1,8 +1,8 @@
 eggnum = 1;eggnumold = 1;
 function randomchik(min, max){return Math.floor(Math.random() * (max - min + 1)) + min;}
 $(window).scroll(function(){$("#EGGSGAME").attr("onclick","timer()");$("#EGGSGAME").html('<div id="clean"><img src="/PEPPA/BIRD.png" style="width:128px;"></div>');$("#score").html($(".EGG").length);$("#clean").show();});
-time=30;function timer(){if(time > 0){if(time>10){time=time-1;}else{time=time-1;time="0"+time};$("#timer").text("0:"+time);setTimeout(function(){return timer();},1000)}else{time=30;$("#EGGSGAME").attr("id", "EGGSGAMESTOP");$("#eggv"+eggnum).hide();fiska();};};
-$("#EGGSGAME").click(function(e){piz=e;EGGA(piz)});
+time=30;function timer(){if(time > 0){if(time>10){time=time-1;}else{time=time-1;time="0"+time};$("#timer").text("0:"+time);setTimeout(function(){return timer();},1000)}else{time=30;stape=1;$("#eggv"+eggnum).hide();fiska();};};
+$("#EGGSGAME").click(function(e){if(stape==0){piz=e;EGGA(piz)}});
 randorno=1;function EGGA(e) {$("#clean").hide();
 if(randorno==1) {
 var hei=$("#EGGSGAME").height()-235;var wid=$("#EGGSGAME").width()-128;
@@ -24,7 +24,7 @@ $("#score").html($(".EGG").length);
 $("#rand").click(function(){rand();});function rand(){if($("#rand").prop('checked')){randorno=1}else{randorno=0}};
 oldfiska=0;stopaimvil=0
 function fiska() {if(eggnum > oldfiska){var rand=randomchik(1, 200);oldfiska=oldfiska+1;vilupka(oldfiska);setTimeout(function(){return fiska();},rand)}else{ if($(".EGG").length==0){return star();}else{setTimeout(function(){return fiska();},10)} }};
-function star(){$("#EGGSGAMESTOP").attr("id", "EGGSGAME");$("#EGGSGAME").attr("onclick","timer();$('#EGGSGAME').attr('onclick','');");$("#EGGSGAME").html('<div id="clean"><img src="/PEPPA/BIRD.png" style="width:128px;"></div>');$("#score").html($(".EGG").length);$("#clean").show();};
+function star(){stape=0;$("#EGGSGAME").attr("onclick","timer();$('#EGGSGAME').attr('onclick','');");$("#EGGSGAME").html('<div id="clean"><img src="/PEPPA/BIRD.png" style="width:128px;"></div>');$("#score").html($(".EGG").length);$("#clean").show();};
 function vilupka(nam){
 $("#eggc"+nam).addClass("roteg");setTimeout(function(){$("#eggc"+nam).removeClass("roteg");$("#eggc"+nam).attr("src", "/PEPPA/BIRDONJUMP.png");},725);setTimeout(function(){animvil()},900);
 function animvil() {
