@@ -1,7 +1,7 @@
 eggnum = 1;eggnumold = 1;
 function randomchik(min, max){return Math.floor(Math.random() * (max - min + 1)) + min;}
 $(window).scroll(function(){$("#EGGSGAME").attr("onclick","timer()");$("#EGGSGAME").html('<div id="clean"><img src="/PEPPA/BIRD.png" style="width:128px;"></div>');$("#score").html($(".EGG").length);$("#clean").show();});
-time=30;function timer(){if(time > 0){if(time>10){time=time-1;}else{time=time-1;time="0"+time};$("#timer").text("0:"+time);setTimeout(function(){return timer();},1000)}else{var mesg=$("#score").text();VK.api('secure.addAppEvent',{user_id:0,activity_id:2,value:mesg});time=30;stape=1;$("#eggv"+eggnum).hide();fiska();};};
+time=30;function timer(){if(time > 0){if(time>10){time=time-1;}else{time=time-1;time="0"+time};$("#timer").text("0:"+time);setTimeout(function(){return timer();},1000)}else{time=30;stape=1;$("#eggv"+eggnum).hide();fiska();};};
 stape=0;
 $("#EGGSGAME").click(function(e){if(stape==0){piz=e;EGGA(piz)}});
 randorno=1;function EGGA(e) {$("#clean").hide();
