@@ -27,7 +27,7 @@ oldfiska=0;stopaimvil=0
 function fiska() {if(eggnum > oldfiska){oldfiska=oldfiska+1;vilupka(oldfiska);return fiska();}else{ if($(".EGG").length==0){return star();}else{setTimeout(function(){return fiska();},10)} }};
 function star(){stape=0;$("#EGGSGAME").attr("onclick","timer();$('#EGGSGAME').attr('onclick','');");$("#EGGSGAME").html('<div id="clean"><img src="/PEPPA/BIRD.png" style="width:128px;"></div>');$("#score").html($(".EGG").length);$("#clean").show();};
 function vilupka(nam){
-var rand=randomchik(1, 600);setTimeout(function(){$("#eggc"+nam).addClass("roteg");setTimeout(function(){$("#eggc"+nam).removeClass("roteg");$("#eggc"+nam).attr("src", "/PEPPA/BIRDONJUMP.png");},725);setTimeout(function(){animvil()},900);},rand)
+var rand=randomchik(1, 2000);setTimeout(function(){$("#eggc"+nam).addClass("roteg");setTimeout(function(){$("#eggc"+nam).removeClass("roteg");$("#eggc"+nam).attr("src", "/PEPPA/BIRDONJUMP.png");},725);setTimeout(function(){animvil()},900);},rand)
 function animvil() {
 $("#eggc"+nam).attr("src", "/PEPPA/BIRDLEFTLEG.png");setTimeout(function(){$("#eggc"+nam).attr("src", "/PEPPA/BIRDRIGHTLEG.png");},300);
 if(stopaimvil==0){setTimeout(function(){return animvil();},600)}else{stopaimvil=0}
