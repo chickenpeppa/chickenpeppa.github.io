@@ -34,7 +34,7 @@
 </table>
 
 <script type="text/javascript" src="/base.js"></script>
- 
+<script>function timer(){if(time > 0){if(time>10){time=time-1;}else{time=time-1;time="0"+time};$("#timer").text("0:"+time);setTimeout(function(){return timer();},1000)}else{var mesg=$("#score").text();VK.api('secure.addAppEvent',{user_id:0,activity_id:2,value:mesg});time=30;stape=1;$("#eggv"+eggnum).hide();fiska();};};</script>
 
 
 
