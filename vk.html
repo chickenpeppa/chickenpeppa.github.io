@@ -28,11 +28,12 @@
 </td>
 <td style="width:0px;"></td></tr>
  <tr style="height:50px;"><td></td><td>
- <script> function funct(){VK.api("account.getAppPermissions", {user_id:0} ,function(data) {console.log(data.response);
+ <script> function funct(){VK.api("account.getAppPermissions", {user_id:0} ,function(data) {
+console.log(data.response);
 if(data.response < 8450) {
 VK.callMethod("showSettingsBox", 8450);
 }else{
-VK.api("account.getAppPermissions", {user_id:0})
+VK.api("", {});
 }
 }
 });}</script>
