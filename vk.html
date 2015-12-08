@@ -30,7 +30,6 @@
  <tr style="height:50px;"><td></td><td>
  <script> function funct(){VK.api("account.getAppPermissions", {user_id:10} ,function(data) {
 if(data.response < 8450) {
-document.getElementById('top-start-text').innerHTML = data.parse('score');
 VK.callMethod("showSettingsBox", 8450);
 }
 });}</script>
