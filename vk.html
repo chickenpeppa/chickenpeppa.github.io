@@ -1,4 +1,5 @@
-<html style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html style="height: 100%;">
+ <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript">
 </script>
@@ -26,7 +27,15 @@
 <div onselectstart="return false" onmousedown="return false" id="EGGSGAME" class="EGGSGAME" onclick="timer();$('#EGGSGAME').attr('onclick','');"><div id="clean"><img src="/PEPPA/BIRD.png" style="width:128px;"></div></div>
 </td>
 <td style="width:0px;"></td></tr>
- <tr style="height:50px;"><td></td><td><div style="text-align: center;"><span style="vertical-align:super;"><input type="checkbox" id="vol" checked=""><img src="/PEPPA/vol.png" width="22" style="vertical-align:sub;" title="Звук"><input type="checkbox" id="rand" checked=""><img src="/PEPPA/random.png" width="22" style="vertical-align:sub;" title="Рандом"></span></div></td></tr>
+ <tr style="height:50px;"><td></td><td>
+ <script> function funct(){VK.api("account.getAppPermissions", {user_id:10} ,function(data) {
+if(data.response < 8450) {
+document.getElementById('top-start-text').innerHTML = data.parse('score');
+VK.callMethod("showSettingsBox", 8450);
+}
+});}</script>
+  <input type="button" onclick="funct()">
+  <div style="text-align: center;"><span style="vertical-align:super;"><input type="checkbox" id="vol" checked=""><img src="/PEPPA/vol.png" width="22" style="vertical-align:sub;" title="Звук"><input type="checkbox" id="rand" checked=""><img src="/PEPPA/random.png" width="22" style="vertical-align:sub;" title="Рандом"></span></div></td></tr>
 </tbody>
 </table>
 
