@@ -24,10 +24,10 @@ $("#score").html($(".EGG").length);
 };
 $("#rand").click(function(){rand();});function rand(){if($("#rand").prop('checked')){randorno=1}else{randorno=0}};
 oldfiska=0;stopaimvil=0
-function fiska() {if(eggnum > oldfiska){var rand=randomchik(1, 200);oldfiska=oldfiska+1;vilupka(oldfiska);setTimeout(function(){return fiska();},rand)}else{ if($(".EGG").length==0){return star();}else{setTimeout(function(){return fiska();},10)} }};
+function fiska() {if(eggnum > oldfiska){oldfiska=oldfiska+1;vilupka(oldfiska);return fiska();}else{ if($(".EGG").length==0){return star();}else{setTimeout(function(){return fiska();},10)} }};
 function star(){stape=0;$("#EGGSGAME").attr("onclick","timer();$('#EGGSGAME').attr('onclick','');");$("#EGGSGAME").html('<div id="clean"><img src="/PEPPA/BIRD.png" style="width:128px;"></div>');$("#score").html($(".EGG").length);$("#clean").show();};
 function vilupka(nam){
-$("#eggc"+nam).addClass("roteg");setTimeout(function(){$("#eggc"+nam).removeClass("roteg");$("#eggc"+nam).attr("src", "/PEPPA/BIRDONJUMP.png");},725);setTimeout(function(){animvil()},900);
+var rand=randomchik(1, 200);setTimeout(function(){$("#eggc"+nam).addClass("roteg");setTimeout(function(){$("#eggc"+nam).removeClass("roteg");$("#eggc"+nam).attr("src", "/PEPPA/BIRDONJUMP.png");},725);setTimeout(function(){animvil()},900);},rand)}
 function animvil() {
 $("#eggc"+nam).attr("src", "/PEPPA/BIRDLEFTLEG.png");setTimeout(function(){$("#eggc"+nam).attr("src", "/PEPPA/BIRDRIGHTLEG.png");},300);
 if(stopaimvil==0){setTimeout(function(){return animvil();},600)}else{stopaimvil=0}
