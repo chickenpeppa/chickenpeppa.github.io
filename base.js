@@ -31,7 +31,7 @@ var rand=randomchik(1, 2000);setTimeout(function(){$("#eggc"+nam).addClass("rote
 function animvil() {
 $("#eggc"+nam).attr("src", "/PEPPA/BIRDLEFTLEG.png");setTimeout(function(){$("#eggc"+nam).attr("src", "/PEPPA/BIRDRIGHTLEG.png");},300);
 if(stopaimvil==0){setTimeout(function(){return animvil();},600)}else{stopaimvil=0}
-setTimeout(function(){$("#EGG"+nam).css("margin-left","0px");setTimeout(function(){$("#EGG"+nam).remove();}, 1000);},1200);
+setTimeout(function(){if(Math.round(Math.random())){$("#EGG"+nam).css("margin-left","0px");}else{var raz = $(".EGGSGAME").width()-64; $("#EGG"+nam).css("margin-left",raz+"px");};setTimeout(function(){$("#EGG"+nam).remove();}, 1000);},1200);
 };
 }
 
