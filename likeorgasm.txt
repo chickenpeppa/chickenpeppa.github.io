@@ -1,1 +1,1 @@
-3.6a; Исправлен balance_recipients; https://yadi.sk/d/vOaigtRz3JSVwG
+3.6.1; Новый ответ на лайк - "*AL ..". Означает, что лайк уже стоит; в подготовке
