@@ -5,7 +5,7 @@
 "d02fd565929ea86853b6dd7832a65983#ff1bff9dfd425e0fe5d0eabdbfe0c0ed": [1502737040, 12],
 
 "TAM PIDOR \/": [0, 0],
-"4d11d6fed183aedafa38f21c909f675a#0c80fbdeff0baa370b6f4c0b9f45c375": [1498417517, 1],
+"zaloopa": [1498417517, 1],
 
 
 "1": [1498394742, 1],
