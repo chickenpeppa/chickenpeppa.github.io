@@ -1,1 +1,1 @@
-4.0.0e; Переделана работа с RuCaptcha. Нужно обязательно обновить бота(!!!); https://yadi.sk/d/7R4q0zDT3M6fBc
+4.1.6b; Теперь бот имеет командную строку! Для ее вызова нажмите Esc. С помощью её можно прописывать настройки, проверить время подписки, проверить баланс RuCaptcha, сбросить статистику\nПереименована настройка delay_btwn_auth в delay_auth\nНовые настройки: see_transfer, proxies_lk_auth, delay_flood, delay_task, test_proxies_timeout, variability_proxies_lk. Информацию о них Вы можете найти в новом settings.txt\nМножество мелких изменений; в подготовке
