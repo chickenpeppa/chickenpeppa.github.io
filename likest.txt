@@ -1,1 +1,1 @@
-5.0.7; List of changes: http://zismo.biz/topic/870076#entry10245226; https://yadi.sk/d/7R4q0zDT3M6fBc
+5.0.8; List of changes: http://zismo.biz/topic/870076#entry10245226; ...not ready
